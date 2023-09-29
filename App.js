@@ -25,8 +25,33 @@ const parent = React.createElement(
   )
 );
 
+
+/* 
+* 2. creating an element with siblings:
+    <div id="parent-div">
+        <div id="child-div">
+            <h1></h1>
+            <h2></h2>
+        </div>
+    </div>
+*/
+
+const parent2 = React.createElement(
+    "div",
+    { id: "parent-div" },
+    React.createElement(
+      "div",
+      { id: "child-div" },
+      [
+        React.createElement("h1", { id: "nested-h1" }, "I am a nested h1"),
+        React.createElement("h2", { id: "nested-h2" }, "I am a nested h2")
+      ]
+    )
+  );
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 /* 
 * converts the react element (object) ==> html
 */
-root.render(parent);
+root.render(parent2);
