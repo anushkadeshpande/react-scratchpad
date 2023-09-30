@@ -1,0 +1,25 @@
+{
+  "name": "01-vanillajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anushkadeshpande/react-cdn.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Anushka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anushkadeshpande/react-cdn/issues"
+  },
+  "homepage": "https://github.com/anushkadeshpande/react-cdn#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
