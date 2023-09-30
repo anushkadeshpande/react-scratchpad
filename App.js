@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client';
+
 /*
  * 1. creating a simple h1 tag
  */
