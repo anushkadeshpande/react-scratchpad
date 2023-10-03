@@ -21,6 +21,7 @@ console.log(jsxHeading);
 
 const HeadingComponent = () => {
     return <div>
+        {console.log("I'm inside JSX")}
     <h1>Helllloooooo 🚀</h1>
     <TitleComponent />
   </div>;
