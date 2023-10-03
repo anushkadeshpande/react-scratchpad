@@ -27,4 +27,4 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 /*
  * converts the react element (object) ==> html
  */
-root.render(HeadingComponent());
+root.render(<HeadingComponent />);
