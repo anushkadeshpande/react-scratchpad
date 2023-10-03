@@ -13,7 +13,7 @@ console.log(heading); // logs an object (react element)
 // task of babel : JSX -> React.createElement
 
 // JSX => React.createElement => React element (object) => HTML Element
-const jsxHeading = <h1>Helllloooooo 🚀</h1>;
+const jsxHeading = <h1>Helllloooooo, I am a JSX Element 📱</h1>;
 
 console.log(jsxHeading);
 
@@ -22,6 +22,7 @@ console.log(jsxHeading);
 const HeadingComponent = () => {
     return <div>
         {console.log("I'm inside JSX")}
+        {jsxHeading}
     <h1>Helllloooooo 🚀</h1>
     <TitleComponent />
   </div>;
