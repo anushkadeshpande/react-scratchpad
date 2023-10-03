@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 /*
  * 1. creating a simple h1 tag
@@ -13,15 +13,22 @@ console.log(heading); // logs an object (react element)
 // task of babel : JSX -> React.createElement
 
 // JSX => React.createElement => React element (object) => HTML Element
-const jsxHeading = <h1>Helllloooooo 🚀</h1>
+const jsxHeading = <h1>Helllloooooo 🚀</h1>;
 
-console.log(jsxHeading)
+console.log(jsxHeading);
 
 // * CREATING FUNCTIONAL COMPONENT
 
 const HeadingComponent = () => {
-    return <h1>Helllloooooo 🚀</h1>
-}
+    return <div>
+    <h1>Helllloooooo 🚀</h1>
+    <TitleComponent />
+  </div>;
+};
+
+const TitleComponent = () => {
+  return <h1>Hiiii from title component</h1>;
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 /*
