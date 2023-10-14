@@ -1,3 +1,6 @@
+* {
+    font-family: 'Nunito Sans', sans-serif;}
+
 .Header {
     display: flex;
     justify-content: space-between;
@@ -13,4 +16,6 @@
     display: flex;
     width: 30vw;
     justify-content: space-between;
+    align-items: center;
+    font-size: large;
 }
