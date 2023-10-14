@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import './App.css'
+import "./App.css";
 
 const Header = () => {
   return (
@@ -18,37 +18,52 @@ const Header = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
+
+const RestaurantCard = () => {
+  return (
+    <div className="RestaurantCard">
+      <h3>Yummy Food</h3>
+      {/* Image */}
+      {/* Name */}
+      {/* Rating */}
+      {/* Cuisine */}
+      {/* ETA */}
+    </div>
+  );
+};
 
 const Body = () => {
   return (
     <div className="Body">
-      <div className="Body__search"></div>
+      <div className="Body__search">
+        Search
+      </div>
       <div className="Body__container">
-        
+        <RestaurantCard />
       </div>
     </div>
-  )
-}
+  );
+};
 
 const App = () => {
   return (
     <div className="App">
       <Header />
-    {/* Body */}
+      <Body />
+      {/* Body */}
       {/* Search */}
       {/* Restaurant Container */}
-        {/* Restaurant Card */}
-    {/* Footer */}
+      {/* Restaurant Card */}
+      {/* Footer */}
       {/* Copyright */}
       {/* Links */}
       {/* Address */}
       {/* Contact */}
     </div>
-  )
-}
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
- 

@@ -19,3 +19,16 @@
     align-items: center;
     font-size: large;
 }
+
+.Body__search {
+    padding: 10px;
+    
+}
+
+
+.RestaurantCard {
+    width: 250px;
+    height: 300px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
