@@ -24,12 +24,16 @@ const Header = () => {
 const RestaurantCard = () => {
   return (
     <div className="RestaurantCard">
-      <h3>Yummy Food</h3>
-      {/* Image */}
-      {/* Name */}
-      {/* Rating */}
-      {/* Cuisine */}
-      {/* ETA */}
+      <div className="RestaurantCard__header">
+        <img src="https://www.herofincorp.com/public/admin_assets/upload/blog/64b91a06ab1c8_food%20business%20ideas.webp" />
+      </div>
+
+      <div className="RestaurantCard__body">
+        <h3>Yummy Food</h3>
+        <h4>North Indian, Fast Food</h4>
+        <h4>⭐⭐⭐⭐⭐</h4>
+        <h6>38 minutes</h6>
+      </div>
     </div>
   );
 };
@@ -37,9 +41,7 @@ const RestaurantCard = () => {
 const Body = () => {
   return (
     <div className="Body">
-      <div className="Body__search">
-        Search
-      </div>
+      <div className="Body__search">Search</div>
       <div className="Body__container">
         <RestaurantCard />
       </div>
