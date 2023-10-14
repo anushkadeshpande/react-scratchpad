@@ -21,6 +21,17 @@ const Header = () => {
   )
 }
 
+const Body = () => {
+  return (
+    <div className="Body">
+      <div className="Body__search"></div>
+      <div className="Body__container">
+        
+      </div>
+    </div>
+  )
+}
+
 const App = () => {
   return (
     <div className="App">
