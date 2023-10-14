@@ -1,0 +1,16 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 20px 40px;
+}
+
+.Header__logo > img {
+    height: 100px;
+}
+
+.Header__nav-items > ul {
+    list-style: none;
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+}
