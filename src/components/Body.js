@@ -1,13 +1,19 @@
+import { useState } from "react";
 import resData from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 
 import "./Body.css";
 
 const Body = () => {
+
+  const [restaurantList, setRestaurantList] = useState(resData)
+
   return (
     <div className="Body">
       <div className="Body__filter">
-        <button className="Body__filter_filterBtn">
+        <button className="Body__filter_filterBtn" onClick={() => {
+          setRestaurantList(restaurantList.filter(res => res.info.avgRating > 4.5))
+        }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -25,7 +31,7 @@ const Body = () => {
         </button>
       </div>
       <div className="Body__container">
-        {resData?.map((restaurant) => (
+        {restaurantList?.map((restaurant) => (
           <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
         ))}
       </div>
