@@ -1,25 +1,40 @@
-
 .RestaurantCard {
-    width: 250px;
-    height: 330px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    margin: 20px;
-  }
-  
-  .RestaurantCard__header > img {
-    width: 250px;
-    height: 130px;
-    border-radius: 10px 10px 0px 0px;
-  }
-  
-  .RestaurantCard__body {
-    padding: 10px;
-  }
-  
-  .RestaurantCard:hover {
-    border-color: orange;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
+  width: 250px;
+  height: 360px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 20px;
+}
+.RestaurantCard__header {
+  width: 250px;
+  height: 130px;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+}
+.RestaurantCard__header > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.RestaurantCard__body {
+  padding: 10px;
+  height: 230px;
+  position: relative;
+}
+
+.RestaurantCard:hover {
+  border-color: orange;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.RestaurantCard__body > h6 {
+  position: absolute;
+  bottom: 10px;
+}
+
+#RestaurantCard__body_avgRating {
+  position: absolute;
+  bottom: 30px;
+}
