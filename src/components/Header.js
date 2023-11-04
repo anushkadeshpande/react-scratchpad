@@ -1,5 +1,7 @@
 import { LOGO_URL } from "../utils/constants";
 
+import './Header.css'
+
 const Header = () => {
   return (
     <div className="Header">

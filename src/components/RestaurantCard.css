@@ -1,0 +1,25 @@
+
+.RestaurantCard {
+    width: 250px;
+    height: 330px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  .RestaurantCard__header > img {
+    width: 250px;
+    height: 130px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .RestaurantCard__body {
+    padding: 10px;
+  }
+  
+  .RestaurantCard:hover {
+    border-color: orange;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
