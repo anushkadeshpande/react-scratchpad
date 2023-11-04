@@ -1,12 +1,12 @@
 .RestaurantCard {
-  width: 250px;
+  width: 240px;
   height: 360px;
   border: 1px solid #000;
   border-radius: 10px;
   margin: 20px;
 }
 .RestaurantCard__header {
-  width: 250px;
+  /* width: 250px; */
   height: 130px;
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;

@@ -1,8 +1,23 @@
-.Body__search {
-  padding: 10px;
+.Body {
+  padding: 0px 40px 0px 40px;
 }
 
 .Body__container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.Body__filter_filterBtn {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.Body__filter_filterBtn:hover {
+  color: orange;
+  transition: 0.2s ease;
 }
