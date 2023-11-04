@@ -26,7 +26,7 @@ const RestaurantCard = (props) => {
   return (
     <div className="RestaurantCard">
       <div className="RestaurantCard__header">
-        <img src="https://www.herofincorp.com/public/admin_assets/upload/blog/64b91a06ab1c8_food%20business%20ideas.webp" />
+        <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/" + resData.info.cloudinaryImageId} />
       </div>
 
       <div className="RestaurantCard__body">
