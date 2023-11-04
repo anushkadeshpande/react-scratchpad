@@ -21,7 +21,7 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = ({restName, resCuisine, resRating, resDeliveryTime}) => {
   return (
     <div className="RestaurantCard">
       <div className="RestaurantCard__header">
@@ -29,10 +29,10 @@ const RestaurantCard = () => {
       </div>
 
       <div className="RestaurantCard__body">
-        <h3>Yummy Food</h3>
-        <h4>North Indian, Fast Food</h4>
-        <h4>⭐⭐⭐⭐⭐</h4>
-        <h6>38 minutes</h6>
+        <h3>{restName}</h3>
+        <h4>{resCuisine}</h4>
+        <h4>{resRating}</h4>
+        <h6>{resDeliveryTime}</h6>
       </div>
     </div>
   );
@@ -43,12 +43,8 @@ const Body = () => {
     <div className="Body">
       <div className="Body__search">Search</div>
       <div className="Body__container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+      <RestaurantCard restName="Yummy Food" resCuisine="North Indian, Fast Food" resRating="⭐⭐⭐⭐⭐" resDeliveryTime="38 minutes" />
+      <RestaurantCard restName="Healthy Food" resCuisine="Diet Food" resRating="⭐⭐⭐⭐" resDeliveryTime="20 minutes" />
       </div>
     </div>
   );
