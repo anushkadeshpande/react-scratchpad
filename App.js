@@ -23,6 +23,10 @@ const Header = () => {
 
 const RestaurantCard = (props) => {
   const {resData} = props
+
+  const {name, cuisines, avgRating} = resData?.info
+
+  const {slaString} = resData?.info?.sla
   return (
     <div className="RestaurantCard">
       <div className="RestaurantCard__header">
@@ -30,16 +34,16 @@ const RestaurantCard = (props) => {
       </div>
 
       <div className="RestaurantCard__body">
-        <h3>{resData.info.name}</h3>
-        <h4>{resData.info.cuisines.join(", ")}</h4>
-        <h4>{resData.info.avgRating}</h4>
-        <h6>{resData.info.sla.slaString}</h6>
+        <h3>{name}</h3>
+        <h4>{cuisines.join(", ")}</h4>
+        <h4>{avgRating}</h4>
+        <h6>{slaString}</h6>
       </div>
     </div>
   );
 };
 
-const resData = {
+const resData = [{
   info: {
     id: "24402",
     name: "Domino's Pizza",
@@ -109,16 +113,18 @@ const resData = {
     link: "https://www.swiggy.com/restaurants/dominos-pizza-amchi-colony-bavdhan-pune-24402",
     type: "WEBLINK",
   },
-};
+}]
 
 const Body = () => {
   return (
     <div className="Body">
       <div className="Body__search">Search</div>
       <div className="Body__container">
+        {resData?.map(restaurant => 
         <RestaurantCard
-          resData={resData}
+          resData={restaurant}
         />
+        )}
       </div>
     </div>
   );
