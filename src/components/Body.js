@@ -1,19 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import resData from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
+import { API_URL } from "../utils/secrets";
 
 import "./Body.css";
 
 const Body = () => {
+  const [restaurantList, setRestaurantList] = useState(resData);
 
-  const [restaurantList, setRestaurantList] = useState(resData)
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(API_URL);
+
+    const json = await data.json();
+
+    console.log(json);
+  };
 
   return (
     <div className="Body">
       <div className="Body__filter">
-        <button className="Body__filter_filterBtn" onClick={() => {
-          setRestaurantList(restaurantList.filter(res => res.info.avgRating > 4.5))
-        }}>
+        <button
+          className="Body__filter_filterBtn"
+          onClick={() => {
+            setRestaurantList(
+              restaurantList.filter((res) => res.info.avgRating > 4.5)
+            );
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
