@@ -17,7 +17,7 @@ const Body = () => {
 
     const json = await data.json();
 
-    setRestaurantList(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants)
+    setRestaurantList(json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   };
 
   return (
