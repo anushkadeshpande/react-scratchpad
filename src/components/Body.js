@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import resData from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import { API_URL } from "../utils/secrets";
 
 import "./Body.css";
 
 const Body = () => {
-  const [restaurantList, setRestaurantList] = useState(resData);
+  // const [restaurantList, setRestaurantList] = useState(resData);
+  const [restaurantList, setRestaurantList] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -17,7 +17,7 @@ const Body = () => {
 
     const json = await data.json();
 
-    console.log(json);
+    setRestaurantList(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants)
   };
 
   return (
