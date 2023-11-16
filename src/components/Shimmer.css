@@ -1,0 +1,15 @@
+.Shimmer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Shimmer__card {
+    width: 240px;
+    height: 360px;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: rgb(255, 246, 230);
+}
