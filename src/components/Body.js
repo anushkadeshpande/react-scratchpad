@@ -20,6 +20,12 @@ const Body = () => {
     setRestaurantList(json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   };
 
+  if(restaurantList.length === 0) {
+    return (
+      <h1>Loading...</h1>
+    )
+  }
+
   return (
     <div className="Body">
       <div className="Body__filter">
