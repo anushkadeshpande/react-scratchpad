@@ -8,6 +8,9 @@ import "./Body.css";
 const Body = () => {
   // const [restaurantList, setRestaurantList] = useState(resData);
   const [restaurantList, setRestaurantList] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
+
 
   useEffect(() => {
     fetchData();
@@ -18,12 +21,40 @@ const Body = () => {
 
     const json = await data.json();
 
-    setRestaurantList(json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setRestaurantList(
+      json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+
+    setFilteredRestaurantList(json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   };
-  
-  return restaurantList.length === 0 ? <Shimmer /> : (
+
+  return restaurantList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="Body">
       <div className="Body__filter">
+        <div className="Body__filter__search">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setFilteredRestaurantList(
+                restaurantList.filter((res) =>
+                  res.info.name
+                    .toLowerCase()
+                    .includes(e.target.value.toLowerCase())
+                )
+              );
+            }}
+          />
+          <button
+            onClick={() => {
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           className="Body__filter_filterBtn"
           onClick={() => {
@@ -49,7 +80,7 @@ const Body = () => {
         </button>
       </div>
       <div className="Body__container">
-        {restaurantList?.map((restaurant) => (
+        {filteredRestaurantList?.map((restaurant) => (
           <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
         ))}
       </div>

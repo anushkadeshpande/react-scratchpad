@@ -21,3 +21,8 @@
   color: orange;
   transition: 0.2s ease;
 }
+
+.Body__filter {
+  display: flex;
+  align-items: center;
+}
