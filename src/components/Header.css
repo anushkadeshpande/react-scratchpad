@@ -16,3 +16,12 @@
   align-items: center;
   font-size: large;
 }
+
+.Header__nav-items-btn {
+  /* font-size: 30px; */
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
