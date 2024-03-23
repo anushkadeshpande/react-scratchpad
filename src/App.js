@@ -5,6 +5,7 @@ import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./App.css";
+import About from "./components/About";
 
 const App = () => {
   return (
@@ -28,6 +29,10 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />
+  },
+  {
+    path: "/about",
+    element: <About />
   }
 ])
 
