@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import "./App.css";
 import About from "./components/About";
@@ -12,7 +12,9 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Body />
+      
+      {/* Whenever there is a change in the path, this outlet will be filled with the children according to the path */}
+      <Outlet />
       {/* Body */}
       {/* Search */}
       {/* Restaurant Container */}
@@ -30,11 +32,17 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Body />
+      },
+      {
+        path: "/about",
+        element: <About />
+      }
+    ],
     errorElement: <Error />
-  },
-  {
-    path: "/about",
-    element: <About />
   }
 ])
 
