@@ -1,8 +1,11 @@
 import React from 'react'
+import UserClass from './UserClass'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <UserClass />
+    </div>
   )
 }
 

@@ -8,6 +8,7 @@ const RestaurantMenu = () => {
 
   const [resData, setResData] = useState()
 
+  // TODO: Why can I not write async function here directly??
   useEffect(() => {
     fetchMenu()
   }, [])
