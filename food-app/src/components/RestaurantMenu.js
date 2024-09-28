@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { RESTAURANT_DATA } from '../utils/secrets'
 import { useParams } from 'react-router-dom'
+import useRestaurantMenu from '../utils/useRestaurantMenu'
 
 const RestaurantMenu = () => {
   const {resId} = useParams()
   console.log(resId)
 
-  const [resData, setResData] = useState()
+  // const [resData, setResData] = useState()
 
-  // TODO: Why can I not write async function here directly??
-  useEffect(() => {
-    fetchMenu()
-  }, [])
-
-  const fetchMenu = async () => {
-    const data = await fetch(RESTAURANT_DATA + resId);
-    const json = await data.json();
-    setResData(json.data);
-  };
+  const resData = useRestaurantMenu(resId)
 
   return (
     <div className='restaurantMenu'>
