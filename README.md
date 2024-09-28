@@ -59,4 +59,12 @@
    
 4. **Creating children routes**:
    
-6. Outlet: 
+6. Outlet:
+
+## React lifecycle methods:
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+
+
+## JSX 
+JavaScript XML, formally JavaScript Syntax eXtension
