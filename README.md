@@ -68,3 +68,24 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 ## JSX 
 JavaScript XML, formally JavaScript Syntax eXtension
+
+
+## Suspense and lazy loading:
+
+Lazy loading is used to load huge components on demand. <br>
+Lazy loading is also known as:
+- Chunking
+- Code Splitting
+- Dynamic Bundling
+- Dynamic import
+
+This can be achieved by importing the code like:
+```js
+const About = lazy(() => import("./components/About"))
+```
+
+React expects the code to be instantly available to be rendered. Since this piece of code is lazily loaded, react falls to the error route due to code unavailability. To avoid this problem, the component invocation needs to be wrapped in a `<Suspense>` and an appropriate fallback has to be specified.
+
+```js
+<Suspense fallback={<h1>Loading...</h1>}><About /></Suspense>
+```
