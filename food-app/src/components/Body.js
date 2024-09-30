@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withFastDeliveryLabel} from "./RestaurantCard";
 import { API_URL } from "../utils/secrets";
 import Shimmer from "./Shimmer";
 
 import "./Body.css";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+
+const FastRestaurantCard = withFastDeliveryLabel(RestaurantCard)
 
 const Body = () => {
   // const [restaurantList, setRestaurantList] = useState(resData);
@@ -87,9 +89,12 @@ const Body = () => {
         </button>
       </div>
       <div className="Body__container">
+        {/* {console.log(filteredRestaurantList)} */}
         {filteredRestaurantList?.map((restaurant) => (
           <Link to={"/restaurant/" + restaurant?.info?.id} key={restaurant?.info?.id}>
-            <RestaurantCard resData={restaurant} />
+            {
+              restaurant?.info?.sla?.deliveryTime < 30 ? <FastRestaurantCard resData={restaurant} /> :<RestaurantCard resData={restaurant} />
+            }
           </Link>
         ))}
       </div>

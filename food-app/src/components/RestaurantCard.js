@@ -24,4 +24,18 @@ const RestaurantCard = (props) => {
   );
 };
 
+const withFastDeliveryLabel = (RestaurantCard) => {
+  return ({resData}) => {
+    console.log("Displaying promotedCard", resData)
+    return (
+      <div>
+        <label>Lightening Fast Delivery</label>
+        <RestaurantCard resData={resData} />
+      </div>
+    )
+  }
+}
+
+export {withFastDeliveryLabel}
+
 export default RestaurantCard;
